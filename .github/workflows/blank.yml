@@ -209,8 +209,8 @@ jobs:
           
           bash ${WORK_ROOT_DIR}/myutils/mscolorprint/scripts/build_server.sh ${JENKINS_ENV_PATH} || CheckLastResult
           
-          # 编译agent
-          bash ${WORK_ROOT_DIR}/myutils/mscolorprint/scripts/build_agent.sh ${JENKINS_ENV_PATH} || CheckLastResult
+          # # 编译agent
+          # bash ${WORK_ROOT_DIR}/myutils/mscolorprint/scripts/build_agent.sh ${JENKINS_ENV_PATH} || CheckLastResult
           
           
           echo "build web system======="
@@ -218,8 +218,8 @@ jobs:
           bash ${WORK_ROOT_DIR}/myutils/mscolorprint/scripts/build_web.sh ${JENKINS_ENV_PATH} || CheckLastResult
 
           # 编译h5 web 系统
-          echo "build h5 web system======>"
-          bash ${WORK_ROOT_DIR}/myutils/mscolorprint/scripts/build_h5_web.sh ${JENKINS_ENV_PATH} || CheckLastResult
+          # echo "build h5 web system======>"
+          # bash ${WORK_ROOT_DIR}/myutils/mscolorprint/scripts/build_h5_web.sh ${JENKINS_ENV_PATH} || CheckLastResult
           
 
 
