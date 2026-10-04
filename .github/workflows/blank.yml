@@ -119,7 +119,7 @@ jobs:
         id: get_branch
         run: |
           echo "BRANCH_NAME=$(echo ${{ github.event.client_payload.mybranch }} | sed 's|refs/heads/||')"  >> $GITHUB_ENV
-          echo "BRANCH=$(echo ${{ github.event.client_payload.mybranch }} | sed 's|refs/heads/||')"  >> $GITHUB_ENV
+          echo "BRANCH=${{ github.event.client_payload.mybranch }}"  >> $GITHUB_ENV
           # echo "BRANCH=$(git rev-parse --abbrev-ref HEAD)" >> $GITHUB_ENV
           # echo "BRANCH_NAME=master" >> $GITHUB_ENV
           # echo "UTILS_DIR=${PWD}/${{github.event.client_payload.project_name}}/myutils" >> $GITHUB_ENV
@@ -549,7 +549,7 @@ jobs:
         id: get_branch
         run: |
           echo "BRANCH_NAME=$(echo ${{ github.event.client_payload.mybranch }} | sed 's|refs/heads/||')"  >> $GITHUB_ENV
-          echo "BRANCH=$(echo ${{ github.event.client_payload.mybranch }} | sed 's|refs/heads/||')"  >> $GITHUB_ENV
+          echo "BRANCH=${{ github.event.client_payload.mybranch }}"  >> $GITHUB_ENV
           echo "UTILS_DIR=/tmp/myutils" >> $GITHUB_ENV
           echo "WORK_ROOT_DIR=${PWD}/${{github.event.client_payload.project_name}}" >> $GITHUB_ENV
           echo "WORKSPACE=${PWD}/${{github.event.client_payload.project_name}}" >> $GITHUB_ENV
