@@ -26,11 +26,12 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: init
+        env:
+          CLIENT_PAYLOAD_JSON: ${{ toJson(github.event.client_payload) }}
         run: |
           echo "charlessoft"
-          # echo "${{ toJson(github.event.client_payload) }}"
-          # echo "charlessoft11"
-          # echo "${{ toJson(github.event.client_payload) }}" > client_payload.json
+          printf '%s\n' "$CLIENT_PAYLOAD_JSON" > client_payload.json
+          cat client_payload.json
 
 
 
